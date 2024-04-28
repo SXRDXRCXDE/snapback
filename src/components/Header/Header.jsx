@@ -4,7 +4,7 @@ import logo from "../../assets/img/Logo.png";
 import {FaPause, FaPlay} from "react-icons/fa";
 import {useDispatch, useSelector} from "react-redux";
 import {setVideo} from "../../store/actions/videoPlayAction";
-import {Link, useLocation, useParams} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {CgMenuRightAlt} from "react-icons/cg";
 import {MdOutlineContentCopy} from "react-icons/md";
 import umma from "../../assets/img/coinmarketcap-icon 2.svg";
@@ -48,7 +48,7 @@ export default function Header() {
     return<>
         <div className={style.container}>
 
-            <div className={'w-full flex flex-col items-start justify-start pl-[56px] pt-[22px] max-[950px]:hidden '}>
+            <div data-aos="zoom-out" className={'w-full flex flex-col items-start justify-start pl-[56px] pt-[22px] max-[950px]:hidden '}>
 
                 <div className={'w-full h-auto flex items-start max-[1400px]:gap-[100px] gap-[356px]'}>
 
@@ -76,8 +76,8 @@ export default function Header() {
 
             </div>
 
-            <div className={'w-full h-full min-[950px]:hidden '}>
-                <div className={style.mob_header}>
+            <div  className={'w-full h-full min-[950px]:hidden '}>
+                <div data-aos="zoom-out" className={style.mob_header}>
 
                     <Link to={'/'} className={'flex items-center '}>
                         <img src={logo} className={'w-[60px] h-[60px] object-contain'}/>
