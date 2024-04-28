@@ -77,9 +77,12 @@ export default function Header() {
                 <div className={'w-full h-auto flex items-start max-[1400px]:gap-[100px] gap-[356px]'}>
 
                     {/*logo*/}
-                    <Link  to={'/'}>
-                        <img onClick={()=>window.location.reload()} src={logo} className={'max-[1400px]:w-[60px] max-[1400px]:h-[60px] w-[90px] h-[90px] object-contain'}/>
-                    </Link>
+                    <div onClick={()=>window.location.reload()}>
+                        <Link  to={'/'}>
+                            <img  src={logo} className={'max-[1400px]:w-[60px] max-[1400px]:h-[60px] w-[90px] h-[90px] object-contain'}/>
+                        </Link>
+                    </div>
+
 
                     {/*navbar links*/}
                     <div className={'gap-[28px] flex items-center'}>
@@ -103,10 +106,13 @@ export default function Header() {
             <div  className={'w-full h-full min-[950px]:hidden '}>
                 <div data-aos="zoom-out" className={style.mob_header}>
 
-                    <Link onClick={()=>window.location.reload()} to={'/'} className={'flex items-center '}>
-                        <img src={logo} className={'w-[60px] h-[60px] object-contain'}/>
-                        <span style={{fontFamily:`Russo One`}} className={'text-[35px] ml-5'}>BUFFY</span>
-                    </Link>
+                    <div onClick={()=>window.location.reload()}>
+                        <Link to={'/'} className={'flex items-center '}>
+                            <img  src={logo} className={'w-[60px] h-[60px] object-contain'}/>
+                            <span  style={{fontFamily:`Russo One`}} className={'text-[35px] ml-5'}>BUFFY</span>
+                        </Link>
+                    </div>
+
 
 
 
