@@ -1,0 +1,10 @@
+.container {
+    @apply max-[950px]:w-[240px] max-[950px]:h-[45px] fixed left-0 right-0 m-auto z-20 bottom-5 w-[697px] max-[1400px]:w-[450px] max-[1400px]:h-[80px] h-[100px] rounded-2xl bg-[#72D360] flex items-center ;
+}
+
+.address {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    @apply  text-[17px] max-[1400px]:text-[14px] ;
+}

@@ -1,0 +1,18 @@
+.container {
+    @apply w-full h-[122px] max-[950px]:h-[80px] max-[950px]:bg-[#72D360] flex flex-col items-center  fixed top-0 left-0 z-50;
+}
+
+.nav_link {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    @apply text-[28px] max-[1400px]:text-[20px] px-3 py-1 rounded-2xl text-[#18001E] cursor-pointer active:translate-y-1 hover:bg-[#0A9CAB];
+}
+
+.mob_header {
+    @apply w-full h-full flex items-center px-5 justify-between;
+}
+
+.img {
+    @apply  w-[35px] h-[35px] object-contain;
+}
