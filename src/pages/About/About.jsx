@@ -4,6 +4,7 @@ import banner from "../../assets/img/Banner.png";
 import {IoMdClose} from "react-icons/io";
 import memewar from "../../assets/videos/final edit 4.mp4";
 import {FaPause, FaPlay} from "react-icons/fa";
+import ContractAddress from "../../components/ContractAddress/ContractAddress";
 
 export default function About() {
 
@@ -88,6 +89,10 @@ export default function About() {
                     START A MEME COIN WAR now BLyaD!<br/><br/>
 
                     bow down or get rolled over!
+                </div>
+
+                <div className={'min-[950px]:hidden mt-4'}>
+                    <ContractAddress/>
                 </div>
 
             </div>

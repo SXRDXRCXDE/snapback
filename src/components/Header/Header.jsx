@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import style from "./style.module.css";
 import logo from "../../assets/img/Logo.png";
 import {FaPause, FaPlay} from "react-icons/fa";
@@ -16,6 +16,8 @@ import dextools from "../../assets/img/Vector.svg";
 import eagle from "../../assets/img/661375b92a7e161501f4b5e5_dexscreener 3.svg";
 import solscan from "../../assets/img/Group 705.svg";
 import dinosaur from "../../assets/img/CoinGecko_logo 2.svg";
+import {message} from "antd";
+import {IoMdCheckmark} from "react-icons/io";
 
 export default function Header() {
 
@@ -43,7 +45,29 @@ export default function Header() {
         },
     ];
 
-    console.log(query.pathname)
+    const addressRef = useRef(null);
+    const [isCopy,setCopy] = useState(false);
+
+    const copyText = () => {
+        setCopy(!isCopy)
+        message.success("Successfully Copied")
+        if (addressRef.current) {
+            // Access the text content using the ref
+            const addressText = addressRef.current.textContent;
+            // Create a temporary input element
+            const tempInput = document.createElement("textarea");
+            tempInput.value = addressText;
+            // Append the input element to the DOM
+            document.body.appendChild(tempInput);
+            // Select the text in the input element
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+            // Copy the selected text
+            document.execCommand("copy");
+            // Remove the temporary input element
+            document.body.removeChild(tempInput);
+        }
+    };
 
     return<>
         <div className={style.container}>
@@ -53,7 +77,7 @@ export default function Header() {
                 <div className={'w-full h-auto flex items-start max-[1400px]:gap-[100px] gap-[356px]'}>
 
                     {/*logo*/}
-                    <Link to={'/'}>
+                    <Link onClick={()=>window.location.reload()} to={'/'}>
                         <img src={logo} className={'max-[1400px]:w-[60px] max-[1400px]:h-[60px] w-[90px] h-[90px] object-contain'}/>
                     </Link>
 
@@ -79,17 +103,18 @@ export default function Header() {
             <div  className={'w-full h-full min-[950px]:hidden '}>
                 <div data-aos="zoom-out" className={style.mob_header}>
 
-                    <Link to={'/'} className={'flex items-center '}>
+                    <Link onClick={()=>window.location.reload()} to={'/'} className={'flex items-center '}>
                         <img src={logo} className={'w-[60px] h-[60px] object-contain'}/>
+                        <span style={{fontFamily:`Russo One`}} className={'text-[35px] ml-5'}>BUFFY</span>
                     </Link>
 
-                    <span style={{fontFamily:`Russo One`}} className={'text-[35px] ml-5'}>BUFFY</span>
+
 
                     <CgMenuRightAlt onClick={()=>setOpen(!isOpen)} className={'text-[45px]'} />
 
                 </div>
 
-                <div className={`${isOpen? `bottom-0` : `-bottom-[600px]`} duration-200 w-full h-[600px] bg-[#413E39] fixed left-0 z-50`}>
+                <div className={`${isOpen? `bottom-0` : `-bottom-[450px]`} duration-200 w-full h-[450px] bg-[#413E39] fixed left-0 z-50`}>
 
                     <div className={'w-full h-full flex flex-col items-center  p-5'}>
 
@@ -105,7 +130,10 @@ export default function Header() {
 
                         <div className={'w-full max-w-[290px] flex items-center h-[40px] rounded-xl bg-[#72D360] mt-4 px-4'}>
 
-                            <MdOutlineContentCopy className={'text-[25px]'} />
+                            {
+                                isCopy? <IoMdCheckmark className={'max-[1400px]:text-2xl text-3xl cursor-pointer'} onClick={copyText} /> :
+                                    <MdOutlineContentCopy className={'max-[1400px]:text-2xl text-3xl cursor-pointer'} onClick={copyText} />
+                            }
 
                             <span style={{fontFamily:`Russo One`}} className={'text-[9px] ml-3'}></span>
 
@@ -114,39 +142,39 @@ export default function Header() {
                         <div className={'flex flex-col items-center w-full h-auto mt-4 '}>
 
                             <div>
-                                <a href={'https://launchpad.solpad.io/'} className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
+                                <a href={'https://launchpad.solpad.io/'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
                                     <img src={wolf} className={style.img} alt={'wolf'}/>
                                 </a>
                             </div>
 
                             <div className={'flex items-center gap-2 mt-2 '}>
 
-                                <a href={'https://twitter.com/Buffy_Solana'} className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
+                                <a href={'https://twitter.com/Buffy_Solana'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
                                     <img src={twitter} className={style.img} alt={'twitter'}/>
                                 </a>
-                                <a href={'https://t.me/BUFFY_Solana'} className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
+                                <a href={'https://t.me/BUFFY_Solana'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
                                     <img src={telegram} className={style.img} alt={'telegram'}/>
                                 </a>
-                                <a href={''} className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
+                                <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
                                     <img src={birdeye} className={style.img} alt={'birdeye'}/>
                                 </a>
-                                <a href={'https://launchpad.solpad.io/'} className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
+                                <a href={'https://launchpad.solpad.io/'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
                                     <img src={dextools} className={style.img} alt={'dextools'}/>
                                 </a>
 
                             </div>
                             <div className={'flex items-center gap-2 mt-2 '}>
 
-                                <a href={''} className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
+                                <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
                                     <img src={eagle} className={style.img} alt={'eagle'}/>
                                 </a>
-                                <a href={''} className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
+                                <a  href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
                                     <img src={solscan} className={style.img} alt={'solscan'}/>
                                 </a>
-                                <a href={''} className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
+                                <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
                                     <img src={dinosaur} className={style.img} alt={'dinosaur'}/>
                                 </a>
-                                <a href={''} className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
+                                <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
                                     <img src={umma} className={style.img} alt={'umma'}/>
                                 </a>
 

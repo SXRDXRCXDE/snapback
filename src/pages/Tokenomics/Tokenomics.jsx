@@ -2,6 +2,7 @@ import React from "react";
 import style from "./style.module.css";
 import {IoMdClose} from "react-icons/io";
 import diagramm from "../../assets/img/Diagramm.png";
+import ContractAddress from "../../components/ContractAddress/ContractAddress";
 
 export default function Tokenomics() {
 
@@ -35,7 +36,7 @@ export default function Tokenomics() {
     return<>
         <div className={style.container}>
 
-            <div data-aos="zoom-out" className={'w-[1000px] h-[644px] bg-[#72D360] rounded-2xl px-[92px] pt-[42px] flex gap-20 items-center z-50 relative max-[950px]:hidden'}>
+            <div className={'w-[1000px] h-[644px] bg-[#72D360] rounded-2xl px-[92px] pt-[42px] flex gap-20 items-center z-50 relative max-[950px]:hidden'}>
 
                 <div data-aos="zoom-out" className={'w-[410px] h-auto'}>
 
@@ -68,7 +69,7 @@ export default function Tokenomics() {
 
                 </div>
 
-                <div data-aos="zoom-out" style={{fontFamily:`Russo One`}} className={'w-full h-auto flex flex-col items-center text-[18px] mt-2'}>
+                <div style={{fontFamily:`Russo One`}} className={'w-full h-auto flex flex-col items-center text-[18px] mt-2'}>
 
                     <div className={'w-[240px] h-10 bg-[#72D360] flex items-center justify-center uppercase '}>
                         total supply
@@ -86,6 +87,9 @@ export default function Tokenomics() {
                             {value.title}
                         </div>)}
 
+                    </div>
+                    <div className={'min-[950px]:hidden mt-4'}>
+                        <ContractAddress/>
                     </div>
 
                 </div>

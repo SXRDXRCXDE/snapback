@@ -37,12 +37,13 @@ function App() {
         <div className="App">
             <Header/>
             <Links/>
-            <ContractAddress/>
+            {window.innerWidth < 950? `` : <ContractAddress/> }
+
             <video data-aos="zoom-out" ref={videoRef} // Assign the reference to the video element
                    autoPlay={true} loop={true} preload={true} muted={true} className={'w-full h-screen max-[950px]:hidden object-cover absolute top-0 left-0 -z-10'}>
                 <source src={memewar} type={'video/mp4'}/>
             </video>
-            <img className={'min-[950px]:hidden w-fit min-h-screen h-[800px] object-cover object-center absolute top-0 left-0 -z-10'} src={back_image}/>
+            <img className={'min-[950px]:hidden w-fit min-h-[980px]  object-cover object-center absolute top-0 left-0 -z-10'} src={back_image}/>
             <Routes>
                 <Route path={'/'} element={<Main/>}/>
                 <Route path={'/about'} element={<About/>}/>

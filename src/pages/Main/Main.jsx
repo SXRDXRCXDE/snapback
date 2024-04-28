@@ -3,6 +3,7 @@ import style from "./style.module.css";
 import memewar from "../../assets/videos/final edit 4.mp4";
 import {FaPause, FaPlay} from "react-icons/fa";
 import AOS from "aos";
+import ContractAddress from "../../components/ContractAddress/ContractAddress";
 
 export default function Main() {
 
@@ -57,6 +58,10 @@ export default function Main() {
                 START A MEME COIN WAR now BLyaD!<br/><br/>
 
                 bow down or get rolled over!
+            </div>
+
+            <div className={'min-[950px]:hidden mt-4'}>
+                <ContractAddress/>
             </div>
 
         </div>
