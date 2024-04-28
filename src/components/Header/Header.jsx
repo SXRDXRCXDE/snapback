@@ -109,7 +109,12 @@ export default function Header() {
                     <div onClick={()=>window.location.reload()}>
                         <Link to={'/'} className={'flex items-center '}>
                             <img  src={logo} className={'w-[60px] h-[60px] object-contain'}/>
-                            <span  style={{fontFamily:`Russo One`}} className={'text-[35px] ml-[70px]'}>BUFFY</span>
+                        </Link>
+                    </div>
+
+                    <div onClick={()=>window.location.reload()}>
+                        <Link to={'/'} className={'flex items-center '}>
+                            <span  style={{fontFamily:`Russo One`}} className={'text-[35px] '}>BUFFY</span>
                         </Link>
                     </div>
 
@@ -159,7 +164,7 @@ export default function Header() {
                                     <img src={twitter} className={style.img} alt={'twitter'}/>
                                 </a>
                                 <a href={'https://t.me/BUFFY_Solana'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
-                                    <img src={telegram} className={style.img} alt={'telegram'}/>
+                                    <img src={telegram} className={`w-[55px] h-[55px] object-contain`} alt={'telegram'}/>
                                 </a>
                                 <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
                                     <img src={birdeye} className={style.img} alt={'birdeye'}/>
@@ -181,7 +186,7 @@ export default function Header() {
                                     <img src={dinosaur} className={`w-[45px] h-[45px] object-contain`} alt={'dinosaur'}/>
                                 </a>
                                 <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
-                                    <img src={umma} className={`w-[40px] h-[40px] object-contain`} alt={'umma'}/>
+                                    <img src={umma} className={`w-[45px] h-[45px] object-contain`} alt={'umma'}/>
                                 </a>
 
                             </div>
