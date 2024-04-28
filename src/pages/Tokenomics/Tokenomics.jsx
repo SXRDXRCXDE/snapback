@@ -62,7 +62,7 @@ export default function Tokenomics() {
 
             </div>
 
-            <div className={'w-full h-auto flex flex-col items-center min-[950px]:hidden  mt-4'}>
+            <div className={'w-full h-auto flex flex-col items-center min-[950px]:hidden  mt-1'}>
 
                 <div data-aos="zoom-out" className={'w-[200px] h-[200px]'}>
 
@@ -72,24 +72,24 @@ export default function Tokenomics() {
 
                 <div style={{fontFamily:`Russo One`}} className={'w-full h-auto flex flex-col items-center text-[18px] mt-2'}>
 
-                    <div className={'w-[240px] h-10 bg-[#72D360] flex items-center justify-center uppercase '}>
+                    <div className={'w-[220px] h-10 bg-[#72D360] text-[14px] flex items-center justify-center uppercase '}>
                         total supply
                     </div>
-                    <div className={'w-[240px] h-10 bg-[#0A9CAB] rounded-b-xl flex items-center justify-center uppercase '}>
+                    <div className={'w-[220px] h-8 bg-[#0A9CAB] text-[14px] rounded-b-xl flex items-center justify-center uppercase '}>
                         1,000,000,000
                     </div>
-                    <div className={'flex flex-col items-center relative w-full pt-6'}>
+                    <div className={'flex flex-col items-center relative w-full pt-6 -translate-y-1'}>
 
-                        <div className={'w-[200px] h-[36px] bg-white flex items-center justify-center rounded-xl uppercase absolute -top-3 '}>
+                        <div className={'w-[200px] h-[26px] bg-white text-[14px] flex items-center justify-center rounded-xl uppercase absolute -top-0 '}>
                             8% cex listings
                         </div>
 
-                        {SUPPLIES.slice(2,8).map((value, index)=> <div key={index} className={` ${index===5? `rounded-b-xl` :``} w-[168px] h-[36px] bg-white flex items-center justify-center  uppercase  `}>
+                        {SUPPLIES.slice(2,8).map((value, index)=> <div key={index} className={` ${index===5? `rounded-b-xl` :``} w-[168px] h-[26px] text-[14px] bg-white flex items-center justify-center  uppercase  `}>
                             {value.title}
                         </div>)}
 
                     </div>
-                    <div className={'min-[950px]:hidden mt-4'}>
+                    <div className={'min-[950px]:hidden mt-2'}>
                         <ContractAddress/>
                     </div>
 

@@ -109,7 +109,7 @@ export default function Header() {
                     <div onClick={()=>window.location.reload()}>
                         <Link to={'/'} className={'flex items-center '}>
                             <img  src={logo} className={'w-[60px] h-[60px] object-contain'}/>
-                            <span  style={{fontFamily:`Russo One`}} className={'text-[35px] ml-5'}>BUFFY</span>
+                            <span  style={{fontFamily:`Russo One`}} className={'text-[35px] ml-[70px]'}>BUFFY</span>
                         </Link>
                     </div>
 
@@ -178,10 +178,10 @@ export default function Header() {
                                     <img src={solscan} className={style.img} alt={'solscan'}/>
                                 </a>
                                 <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
-                                    <img src={dinosaur} className={style.img} alt={'dinosaur'}/>
+                                    <img src={dinosaur} className={`w-[45px] h-[45px] object-contain`} alt={'dinosaur'}/>
                                 </a>
                                 <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
-                                    <img src={umma} className={style.img} alt={'umma'}/>
+                                    <img src={umma} className={`w-[40px] h-[40px] object-contain`} alt={'umma'}/>
                                 </a>
 
                             </div>

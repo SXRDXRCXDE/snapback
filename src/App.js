@@ -43,7 +43,7 @@ function App() {
                    autoPlay={true} loop={true} preload={true} muted={true} className={'w-full h-screen max-[950px]:hidden object-cover absolute top-0 left-0 -z-10'}>
                 <source src={memewar} type={'video/mp4'}/>
             </video>
-            <img className={'min-[950px]:hidden w-fit min-h-[980px]  object-cover object-center absolute top-0 left-0 -z-10'} src={back_image}/>
+            <img style={{height:`${window.innerHeight}px`}} className={'min-[950px]:hidden w-fit min-h-screen  object-cover object-center absolute top-0 left-0 -z-10'} src={back_image}/>
             <Routes>
                 <Route path={'/'} element={<Main/>}/>
                 <Route path={'/about'} element={<About/>}/>
