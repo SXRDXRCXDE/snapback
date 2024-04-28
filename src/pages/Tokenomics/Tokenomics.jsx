@@ -63,9 +63,9 @@ export default function Tokenomics() {
 
             <div className={'w-full h-auto flex flex-col items-center min-[950px]:hidden  mt-4'}>
 
-                <div data-aos="zoom-out" className={'w-[200px] h-auto'}>
+                <div data-aos="zoom-out" className={'w-[200px] h-[200px]'}>
 
-                    <img src={diagramm} className={'w-full h-fit object-contain max-w-[400px] max-h-[400px]'}/>
+                    <img src={diagramm} className={'w-full h-fit object-contain max-w-[200px] max-h-[200px]'}/>
 
                 </div>
 
