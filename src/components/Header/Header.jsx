@@ -166,20 +166,20 @@ export default function Header() {
                                 <a href={'https://t.me/BUFFY_Solana'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
                                     <img src={telegram} className={`w-[55px] h-[55px] object-contain`} alt={'telegram'}/>
                                 </a>
-                                <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
+                                <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
                                     <img src={birdeye} className={style.img} alt={'birdeye'}/>
                                 </a>
-                                <a href={'https://launchpad.solpad.io/'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
+                                <a href={'https://launchpad.solpad.io/'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
                                     <img src={dextools} className={style.img} alt={'dextools'}/>
                                 </a>
 
                             </div>
                             <div className={'flex items-center gap-2 mt-2 '}>
 
-                                <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
+                                <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
                                     <img src={eagle} className={style.img} alt={'eagle'}/>
                                 </a>
-                                <a  href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
+                                <a  href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
                                     <img src={solscan} className={style.img} alt={'solscan'}/>
                                 </a>
                                 <a href={''} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-black flex items-center justify-center'}>
