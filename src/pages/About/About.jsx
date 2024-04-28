@@ -5,6 +5,7 @@ import {IoMdClose} from "react-icons/io";
 import memewar from "../../assets/videos/final edit 4.mp4";
 import {FaPause, FaPlay} from "react-icons/fa";
 import ContractAddress from "../../components/ContractAddress/ContractAddress";
+import {Link} from "react-router-dom";
 
 export default function About() {
 
@@ -53,9 +54,9 @@ export default function About() {
 
                 </div>
 
-                <div style={{boxShadow:`3px 3px 1px 0 #b0a6a5`}} className={'w-[58px] h-[55px] rounded-lg bg-white flex items-center justify-center absolute bottom-5 right-5'}>
+                <Link to={'/'} style={{boxShadow:`3px 3px 1px 0 #b0a6a5`}} className={'w-[58px] h-[55px] rounded-lg bg-white flex items-center justify-center absolute bottom-5 right-5'}>
                     <IoMdClose className={'text-4xl opacity-65'} />
-                </div>
+                </Link>
 
             </div>
 

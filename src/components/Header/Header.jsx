@@ -77,8 +77,8 @@ export default function Header() {
                 <div className={'w-full h-auto flex items-start max-[1400px]:gap-[100px] gap-[356px]'}>
 
                     {/*logo*/}
-                    <Link onClick={()=>window.location.reload()} to={'/'}>
-                        <img src={logo} className={'max-[1400px]:w-[60px] max-[1400px]:h-[60px] w-[90px] h-[90px] object-contain'}/>
+                    <Link  to={'/'}>
+                        <img onClick={()=>window.location.reload()} src={logo} className={'max-[1400px]:w-[60px] max-[1400px]:h-[60px] w-[90px] h-[90px] object-contain'}/>
                     </Link>
 
                     {/*navbar links*/}
