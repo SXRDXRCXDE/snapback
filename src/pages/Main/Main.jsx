@@ -52,10 +52,10 @@ export default function Main() {
 
 
 
-            <div data-aos="zoom-out" style={{fontFamily:`Russo One`}} className={'mt-3 max-w-[300px] w-full h-auto p-2 text-start text-[14px] uppercase bg-white rounded-xl min-[950px]:hidden'}>
-                $buffy, solana NATIVE DOG COIN, known to be vladimir putins dog. buffy just pretends, in reality he is the boss and putin is his dog.<br/>
+            <div data-aos="zoom-out" style={{fontFamily:`Russo One`}} className={'mt-3 max-w-[300px] w-full h-auto p-2 text-start leading-[17px] text-[14px] uppercase bg-white rounded-xl min-[950px]:hidden'}>
+                $buffy, solana NATIVE DOG COIN, known to be vladimir putins dog. buffy just pretends, in reality he is the boss and putin is his dog.<br/><br/>
 
-                START A MEME COIN WAR now BLyaD!<br/>
+                START A MEME COIN WAR now BLyaD!<br/><br/>
 
                 bow down or get rolled over!
             </div>
