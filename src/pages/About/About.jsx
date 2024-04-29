@@ -6,6 +6,8 @@ import memewar from "../../assets/videos/final edit 4.mp4";
 import {FaPause, FaPlay} from "react-icons/fa";
 import ContractAddress from "../../components/ContractAddress/ContractAddress";
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {setVideo} from "../../store/actions/videoPlayAction";
 
 export default function About() {
 
@@ -24,10 +26,14 @@ export default function About() {
         }
     }, [isPlay]);
 
-    return<>
-        <div  className={style.container}>
 
-            <div data-aos="zoom-out" className={'w-[1000px] h-[644px] bg-[#72D360] rounded-2xl px-[92px] pt-[42px] flex flex-col items-center z-50 relative max-[950px]:hidden'}>
+    const dispatch = useDispatch();
+    const isVideo = useSelector((state)=> state.videoPlay.videoPlay)
+
+    return<>
+        <div onClick={()=>dispatch(setVideo(!isVideo))} className={style.container}>
+
+            <div onClick={(e)=>e.stopPropagation()} data-aos="zoom-out" className={'w-[1000px] h-[644px] bg-[#72D360] rounded-2xl px-[92px] pt-[42px] flex flex-col items-center z-50 relative max-[950px]:hidden'}>
 
                 <img src={banner} className={'w-full max-w-[900px] h-fit max-h-[291px] object-contain'}/>
 
@@ -60,7 +66,7 @@ export default function About() {
 
             </div>
 
-            <div className={'min-[950px]:hidden flex flex-col items-center '}>
+            <div onClick={(e)=>e.stopPropagation()} className={'min-[950px]:hidden flex flex-col items-center '}>
 
                 <div data-aos="zoom-out" className={'w-[300px] h-[210px] bg-[#0A9CAB]/30 rounded-xl flex flex-col items-center overflow-hidden p-[2px]'}>
 

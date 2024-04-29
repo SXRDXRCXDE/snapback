@@ -4,6 +4,8 @@ import memewar from "../../assets/videos/final edit 4.mp4";
 import {FaPause, FaPlay} from "react-icons/fa";
 import AOS from "aos";
 import ContractAddress from "../../components/ContractAddress/ContractAddress";
+import {useDispatch, useSelector} from "react-redux";
+import {setVideo} from "../../store/actions/videoPlayAction";
 
 export default function Main() {
 
@@ -23,11 +25,14 @@ export default function Main() {
     }, [isPlay]);
 
 
+    const dispatch = useDispatch();
+    const isVideo = useSelector((state)=> state.videoPlay.videoPlay)
+
 
     return<>
-        <div className={style.container}>
+        <div onClick={()=>dispatch(setVideo(!isVideo))} className={style.container}>
 
-            <div data-aos="zoom-out" className={'w-[300px] h-[210px] bg-[#0A9CAB]/30 rounded-xl flex flex-col items-center overflow-hidden p-[2px] min-[950px]:hidden'}>
+            <div onClick={(e)=>e.stopPropagation()} data-aos="zoom-out" className={'w-[300px] h-[210px] bg-[#0A9CAB]/30 rounded-xl flex flex-col items-center overflow-hidden p-[2px] min-[950px]:hidden'}>
 
                 <video onClick={()=>setPlay(!isPlay)} ref={videoRef} // Assign the reference to the video element
                        autoPlay={true} loop={true} preload={true} muted={true} className={'w-full h-[140px] object-cover rounded-xl '}>
@@ -46,13 +51,13 @@ export default function Main() {
             </div>
 
 
-            <div data-aos="zoom-out" style={{fontFamily:`Russo One`}} className={'px-4 py-1 bg-[#72D360] mt-4 rounded-xl text-[21px] uppercase min-[950px]:hidden '}>
+            <div onClick={(e)=>e.stopPropagation()} data-aos="zoom-out" style={{fontFamily:`Russo One`}} className={'px-4 py-1 bg-[#72D360] mt-4 rounded-xl text-[21px] uppercase min-[950px]:hidden '}>
                 about $buffy
             </div>
 
 
 
-            <div data-aos="zoom-out" style={{fontFamily:`Russo One`}} className={'mt-3 max-w-[300px] w-full h-auto p-2 text-start leading-[17px] text-[14px] uppercase bg-white rounded-xl min-[950px]:hidden'}>
+            <div onClick={(e)=>e.stopPropagation()} data-aos="zoom-out" style={{fontFamily:`Russo One`}} className={'mt-3 max-w-[300px] w-full h-auto p-2 text-start leading-[17px] text-[14px] uppercase bg-white rounded-xl min-[950px]:hidden'}>
                 $buffy, solana NATIVE DOG COIN, known to be vladimir putins dog. buffy just pretends, in reality he is the boss and putin is his dog.<br/><br/>
 
                 START A MEME COIN WAR now BLyaD!<br/><br/>
@@ -60,7 +65,7 @@ export default function Main() {
                 bow down or get rolled over!
             </div>
 
-            <div className={'min-[950px]:hidden mt-4'}>
+            <div onClick={(e)=>e.stopPropagation()} className={'min-[950px]:hidden mt-4'}>
                 <ContractAddress/>
             </div>
 

@@ -4,6 +4,8 @@ import {IoMdClose} from "react-icons/io";
 import diagramm from "../../assets/img/Diagramm.png";
 import ContractAddress from "../../components/ContractAddress/ContractAddress";
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {setVideo} from "../../store/actions/videoPlayAction";
 
 export default function Tokenomics() {
 
@@ -34,10 +36,13 @@ export default function Tokenomics() {
         },
     ]
 
-    return<>
-        <div className={style.container}>
+    const dispatch = useDispatch();
+    const isVideo = useSelector((state)=> state.videoPlay.videoPlay)
 
-            <div className={'w-[1000px] h-[644px] bg-[#72D360] rounded-2xl px-[92px] pt-[42px] flex gap-20 items-center z-50 relative max-[950px]:hidden'}>
+    return<>
+        <div onClick={()=>dispatch(setVideo(!isVideo))} className={style.container}>
+
+            <div onClick={(e)=>e.stopPropagation()} className={'w-[1000px] h-[644px] bg-[#72D360] rounded-2xl px-[92px] pt-[42px] flex gap-20 items-center z-50 relative max-[950px]:hidden'}>
 
                 <div data-aos="zoom-out" className={'w-[410px] h-auto'}>
 

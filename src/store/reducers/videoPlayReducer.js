@@ -1,5 +1,5 @@
 const initialState = {
-    videoPlay: false
+    videoPlay: true
 }
 
 const VideoPlayReducer = (state = initialState, action) => {
