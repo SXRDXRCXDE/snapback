@@ -69,7 +69,7 @@ export default function BurnEarn() {
 
             <div onClick={(e)=>e.stopPropagation()} className={'min-[950px]:hidden flex flex-col items-center '}>
 
-                <div className={'flex items-center justify-center w-[110px] h-10 mt-3 rounded-lg relative bg-[#014CAE] '}>
+                <div className={'flex items-center justify-center w-[110px] h-10 mt-3 rounded-lg relative bg-[#014CAE] translate-x-4 '}>
 
                     <img src={putin_coin} className={'w-[60px] h-[60px] object-contain absolute -left-12'}/>
                     <span style={{fontFamily:`Russo One`}} className={'uppercase text-[18px]'}>$putin</span>
