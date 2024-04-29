@@ -90,6 +90,7 @@ export default function Header() {
                         <Link to={`/tokenomics`}  className={` ${query.pathname===`/tokenomics`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>TOKENOMICS</Link>
                         <Link to={`/about`} className={` ${query.pathname===`/about`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>ABOUT BUFFY</Link>
                         <a href={``} className={` ${query.pathname===`/buy_now`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>BUY NOW</a>
+                        <Link to={`/burn_2_earn`} className={` ${query.pathname===`/burn_2_earn`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>BURN2EARN</Link>
                         <div onClick={()=>dispatch(setVideo(true))} className={` ${videoPlay?`bg-[#0A9CAB]` : `bg-[#72D360]`} cursor-pointer duration-200 active:translate-y-1 max-[1400px]:text-xl text-3xl rounded-2xl px-6 py-3 `}>
                             <FaPlay className={'translate-x-0.5 text-white'} />
                         </div>
@@ -127,19 +128,22 @@ export default function Header() {
 
                 <div className={`${isOpen? `bottom-0` : `-bottom-[450px]`} duration-200 w-full h-[450px] bg-[#413E39] fixed left-0 z-50`}>
 
-                    <div className={'w-full h-full flex flex-col items-center  p-1'}>
+                    <div className={'w-full h-full flex flex-col items-center  pt-1.5'}>
 
-                        <Link onClick={()=>setOpen(false)} to={'/about'} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/about`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200 w-[196px] py-1 mt-4 rounded-xl text-[21px] uppercase `}>
+                        <Link onClick={()=>setOpen(false)} to={'/about'} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/about`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200 w-[196px] py-1 mt-2 rounded-xl text-[21px] uppercase `}>
                             about $buffy
                         </Link>
-                        <Link onClick={()=>setOpen(false)} to={'/tokenomics'} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/tokenomics`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200 w-[196px] py-1 mt-4 rounded-xl text-[21px] uppercase `}>
+                        <Link onClick={()=>setOpen(false)} to={'/tokenomics'} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/tokenomics`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200 w-[196px] py-1 mt-2 rounded-xl text-[21px] uppercase `}>
                             tokenomics
                         </Link>
-                        <a onClick={()=>setOpen(false)} href={''} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/buy_now`?`bg-[#0A9CAB]`:`bg-[#72D360]`}  duration-200 w-[196px] py-1 mt-4 rounded-xl text-[21px] uppercase `}>
+                        <a onClick={()=>setOpen(false)} href={''} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/buy_now`?`bg-[#0A9CAB]`:`bg-[#72D360]`}  duration-200 w-[196px] py-1 mt-2 rounded-xl text-[21px] uppercase `}>
                             BUY NOW
                         </a>
+                        <Link onClick={()=>setOpen(false)} to={'/burn_2_earn'} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/burn_2_earn`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200 w-[196px] py-1 mt-2 rounded-xl text-[21px] uppercase `}>
+                            BURN2EARN
+                        </Link>
 
-                        <div className={'w-full max-w-[290px] flex items-center h-[40px] rounded-xl bg-[#72D360] mt-4 px-4'}>
+                        <div className={'w-full max-w-[290px] flex items-center h-[40px] rounded-xl bg-[#72D360] mt-2 px-4'}>
 
                             {
                                 isCopy? <IoMdCheckmark className={'max-[1400px]:text-2xl text-3xl cursor-pointer'} onClick={copyText} /> :
@@ -150,7 +154,7 @@ export default function Header() {
 
                         </div>
 
-                        <div className={'flex flex-col items-center w-full h-auto mt-4 '}>
+                        <div className={'flex flex-col items-center w-full h-auto mt-2 '}>
 
                             <div>
                                 <a href={'https://launchpad.solpad.io/'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>

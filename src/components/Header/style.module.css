@@ -6,7 +6,7 @@
     font-family: "Russo One", sans-serif;
     font-weight: 400;
     font-style: normal;
-    @apply text-[28px] max-[1400px]:text-[20px] px-3 py-1 rounded-2xl text-[#18001E] cursor-pointer active:translate-y-1 hover:bg-[#0A9CAB];
+    @apply text-[28px] max-[1400px]:text-[20px] px-3 py-1 rounded-2xl text-[#18001E] cursor-pointer active:translate-y-1 uppercase hover:bg-[#0A9CAB];
 }
 
 .mob_header {
