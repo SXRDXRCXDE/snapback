@@ -29,16 +29,16 @@ export default function Main() {
 
             <div data-aos="zoom-out" className={'w-[300px] h-[210px] bg-[#0A9CAB]/30 rounded-xl flex flex-col items-center overflow-hidden p-[2px] min-[950px]:hidden'}>
 
-                <video  ref={videoRef} // Assign the reference to the video element
+                <video onClick={()=>setPlay(!isPlay)} ref={videoRef} // Assign the reference to the video element
                        autoPlay={true} loop={true} preload={true} muted={true} className={'w-full h-[140px] object-cover rounded-xl '}>
                     <source src={memewar} type={'video/mp4'}/>
                 </video>
 
                 <div className={'flex items-center gap-3 mt-2'}>
-                    <div onClick={()=>setPlay(true)} className={` ${isPlay?`bg-[#0A9CAB]` : `bg-[#72D360]`} px-6 py-3 text-xl rounded-lg duration-200 `}>
+                    <div onClick={()=>setPlay(true)} className={` ${isPlay?`bg-[#0A9CAB]` : `bg-[#72D360]`} cursor-pointer px-6 py-3 text-xl rounded-lg duration-200 `}>
                         <FaPlay className={'translate-x-0.5 text-white'} />
                     </div>
-                    <div onClick={()=>setPlay(false)} className={` ${isPlay? `bg-[#72D360]` : `bg-[#0A9CAB]`} px-6 py-3 text-xl rounded-lg duration-200 `}>
+                    <div onClick={()=>setPlay(false)} className={` ${isPlay? `bg-[#72D360]` : `bg-[#0A9CAB]`} cursor-pointer px-6 py-3 text-xl rounded-lg duration-200 `}>
                         <FaPause className={' text-white'} />
                     </div>
                 </div>

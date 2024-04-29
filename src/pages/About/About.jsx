@@ -42,7 +42,7 @@ export default function About() {
 
                     <div className={'w-auto h-auto text-start'}>
 
-                        <p style={{fontFamily:`Russo One`}} className={'text-[28px] leading-[38px] translate-y-2'}>
+                        <p style={{fontFamily:`Russo One`}} className={'text-[28px] leading-[38px] translate-y-2 uppercase'}>
                             $buffy, solana NATIVE DOG COIN, known to be vladimir putins dog. buffy just pretends, in reality he is the boss and putin is his dog.<br/><br/>
 
                             START A MEME COIN WAR now BLyaD!<br/><br/>
@@ -64,7 +64,7 @@ export default function About() {
 
                 <div data-aos="zoom-out" className={'w-[300px] h-[210px] bg-[#0A9CAB]/30 rounded-xl flex flex-col items-center overflow-hidden p-[2px]'}>
 
-                    <video  ref={videoRef} // Assign the reference to the video element
+                    <video onClick={()=>setPlay(!isPlay)} ref={videoRef} // Assign the reference to the video element
                             autoPlay={true} loop={true} preload={true} muted={true} className={'w-full h-[140px] object-cover rounded-xl '}>
                         <source src={memewar} type={'video/mp4'}/>
                     </video>
@@ -84,10 +84,10 @@ export default function About() {
                     about $buffy
                 </div>
 
-                <div data-aos="zoom-out" style={{fontFamily:`Russo One`}} className={'mt-3 max-w-[300px] w-full h-auto p-2 text-start text-[14px] uppercase bg-white rounded-xl min-[950px]:hidden'}>
-                    $buffy, solana NATIVE DOG COIN, known to be vladimir putins dog. buffy just pretends, in reality he is the boss and putin is his dog.<br/>
+                <div data-aos="zoom-out" style={{fontFamily:`Russo One`}} className={'mt-3 max-w-[300px] w-full h-auto p-2 text-start leading-[17px] text-[14px] uppercase bg-white rounded-xl min-[950px]:hidden'}>
+                    $buffy, solana NATIVE DOG COIN, known to be vladimir putins dog. buffy just pretends, in reality he is the boss and putin is his dog.<br/><br/>
 
-                    START A MEME COIN WAR now BLyaD!<br/>
+                    START A MEME COIN WAR now BLyaD!<br/><br/>
 
                     bow down or get rolled over!
                 </div>

@@ -55,7 +55,7 @@ export default function Links() {
     return<>
         <div data-aos="zoom-out" className={'flex flex-col items-center max-[1400px]:gap-[10px] gap-[24px] fixed top-[90px] right-12 z-20 max-[950px]:hidden'}>
 
-            {Links.map((value, index)=>   <a key={index} href={value.url} target="_blank" rel="noopener noreferrer" className={` ${value.url? `bg-white`:`bg-[#201919]`} hover:bg-[#72D360] duration-300 cursor-pointer max-[1400px]:w-[45px] max-[1400px]:h-[45px] w-[65px] h-[65px] rounded-lg flex items-center justify-center`}>
+            {Links.map((value, index)=>   <a key={index} href={value.url} target="_blank" rel="noopener noreferrer" className={` ${value.url || index < 6 ? `bg-white`:`bg-[#201919]`} hover:bg-[#72D360] duration-300 cursor-pointer max-[1400px]:w-[45px] max-[1400px]:h-[45px] w-[65px] h-[65px] rounded-lg flex items-center justify-center`}>
                 {value.img}
             </a>)}
 

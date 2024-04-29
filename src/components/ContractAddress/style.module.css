@@ -1,5 +1,5 @@
 .container {
-    @apply max-[950px]:w-[240px] max-[950px]:h-[45px] min-[950px]:fixed min-[950px]:left-0 min-[950px]:right-0 m-auto z-20 bottom-5 w-[697px] max-[1400px]:w-[450px] max-[1400px]:h-[80px] h-[100px] rounded-2xl bg-[#72D360] flex items-center ;
+    @apply max-[950px]:w-[280px] max-[950px]:h-[45px] min-[950px]:fixed min-[950px]:left-0 min-[950px]:right-0 m-auto z-20 bottom-5 w-[697px] max-[1400px]:w-[450px] max-[1400px]:h-[80px] h-[100px] rounded-xl bg-[#72D360] flex items-center ;
 }
 
 .address {

@@ -90,10 +90,10 @@ export default function Header() {
                         <Link to={`/tokenomics`}  className={` ${query.pathname===`/tokenomics`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>TOKENOMICS</Link>
                         <Link to={`/about`} className={` ${query.pathname===`/about`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>ABOUT BUFFY</Link>
                         <a href={``} className={` ${query.pathname===`/buy_now`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>BUY NOW</a>
-                        <div onClick={()=>dispatch(setVideo(true))} className={` ${videoPlay?`bg-[#0A9CAB]` : `bg-[#72D360]`} duration-200 active:translate-y-1 max-[1400px]:text-xl text-3xl rounded-2xl px-6 py-3 `}>
+                        <div onClick={()=>dispatch(setVideo(true))} className={` ${videoPlay?`bg-[#0A9CAB]` : `bg-[#72D360]`} cursor-pointer duration-200 active:translate-y-1 max-[1400px]:text-xl text-3xl rounded-2xl px-6 py-3 `}>
                             <FaPlay className={'translate-x-0.5 text-white'} />
                         </div>
-                        <div onClick={()=>dispatch(setVideo(false))} className={`${videoPlay? `bg-[#72D360]` : `bg-[#0A9CAB]`} duration-200 active:translate-y-1 max-[1400px]:text-xl text-3xl rounded-2xl px-6 py-3 `}>
+                        <div onClick={()=>dispatch(setVideo(false))} className={`${videoPlay? `bg-[#72D360]` : `bg-[#0A9CAB]`} cursor-pointer duration-200 active:translate-y-1 max-[1400px]:text-xl text-3xl rounded-2xl px-6 py-3 `}>
                             <FaPause className={' text-white'} />
                         </div>
 
@@ -127,7 +127,7 @@ export default function Header() {
 
                 <div className={`${isOpen? `bottom-0` : `-bottom-[450px]`} duration-200 w-full h-[450px] bg-[#413E39] fixed left-0 z-50`}>
 
-                    <div className={'w-full h-full flex flex-col items-center  p-5'}>
+                    <div className={'w-full h-full flex flex-col items-center  p-1'}>
 
                         <Link onClick={()=>setOpen(false)} to={'/about'} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/about`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200 w-[196px] py-1 mt-4 rounded-xl text-[21px] uppercase `}>
                             about $buffy
