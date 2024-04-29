@@ -4,7 +4,6 @@ import {setVideo} from "../../store/actions/videoPlayAction";
 import banner from "../../assets/img/Banner_putin.png";
 import {Link} from "react-router-dom";
 import {IoMdClose} from "react-icons/io";
-import memewar from "../../assets/videos/final edit 4.mp4";
 import {FaPause, FaPlay} from "react-icons/fa";
 import ContractAddress from "../../components/ContractAddress/ContractAddress";
 import {useDispatch, useSelector} from "react-redux";
@@ -67,11 +66,12 @@ export default function BurnEarn() {
 
             </div>
 
-            <div onClick={(e)=>e.stopPropagation()} className={'min-[950px]:hidden flex flex-col items-center '}>
+            <div onClick={(e)=>e.stopPropagation()} className={'min-[950px]:hidden flex flex-col items-center   '}>
+
 
                 <div className={'flex items-center justify-center w-[110px] h-10 mt-3 rounded-lg relative bg-[#014CAE] translate-x-4 '}>
 
-                    <img src={putin_coin} className={'w-[60px] h-[60px] object-contain absolute -left-12'}/>
+                    <img src={putin_coin} className={'w-[60px] h-[60px] rounded-full object-contain absolute -left-12'}/>
                     <span style={{fontFamily:`Russo One`}} className={'uppercase text-[18px]'}>$putin</span>
 
                 </div>
