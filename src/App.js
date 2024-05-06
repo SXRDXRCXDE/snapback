@@ -52,7 +52,7 @@ function App() {
             <Routes>
                 <Route path={'/'} element={<Main/>}/>
                 <Route path={'/about'} element={<About/>}/>
-                <Route path={'/tokenomics'} element={<Tokenomics/>}/>
+                <Route path={'/info'} element={<Tokenomics/>}/>
                 <Route path={'/burn_2_earn'} element={<BurnEarn/>}/>
             </Routes>
         </div>

@@ -39,10 +39,6 @@ export default function Links() {
             url:``
         },
         {
-            img:<img src={wolf} className={style.img} alt={'wolf'}/>,
-            url:`https://launchpad.solpad.io/`
-        },
-        {
             img:<img src={dinosaur} className={style.img} alt={'dinosaur'}/>,
             url:``
         },

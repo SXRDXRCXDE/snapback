@@ -32,7 +32,7 @@ export default function Header() {
 
     const NAVBAR = [
         {
-            title:"TOKENOMICS",
+            title:"Info",
             to: '/tokenomics'
         },
         {
@@ -87,7 +87,7 @@ export default function Header() {
                     {/*navbar links*/}
                     <div className={'gap-[28px] flex items-center'}>
 
-                        <Link to={`/tokenomics`}  className={` ${query.pathname===`/tokenomics`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>TOKENOMICS</Link>
+                        <Link to={`/info`}  className={` ${query.pathname===`/info`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>Info</Link>
                         <Link to={`/about`} className={` ${query.pathname===`/about`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>ABOUT BUFFY</Link>
                         <a href={``} className={` ${query.pathname===`/buy_now`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>BUY NOW</a>
                         <Link to={`/burn_2_earn`} className={` ${query.pathname===`/burn_2_earn`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200  ${style.nav_link}`}>BURN2EARN</Link>
@@ -133,8 +133,8 @@ export default function Header() {
                         <Link onClick={()=>setOpen(false)} to={'/about'} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/about`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200 w-[196px] py-1 mt-2 rounded-xl text-[21px] uppercase `}>
                             about $buffy
                         </Link>
-                        <Link onClick={()=>setOpen(false)} to={'/tokenomics'} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/tokenomics`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200 w-[196px] py-1 mt-2 rounded-xl text-[21px] uppercase `}>
-                            tokenomics
+                        <Link onClick={()=>setOpen(false)} to={'/info'} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/info`?`bg-[#0A9CAB]`:`bg-[#72D360]`} duration-200 w-[196px] py-1 mt-2 rounded-xl text-[21px] uppercase `}>
+                            info
                         </Link>
                         <a onClick={()=>setOpen(false)} href={''} style={{fontFamily:`Russo One`}} className={` ${query.pathname===`/buy_now`?`bg-[#0A9CAB]`:`bg-[#72D360]`}  duration-200 w-[196px] py-1 mt-2 rounded-xl text-[21px] uppercase `}>
                             BUY NOW
@@ -156,13 +156,7 @@ export default function Header() {
 
                         <div className={'flex flex-col items-center w-full h-auto mt-2 '}>
 
-                            <div>
-                                <a href={'https://launchpad.solpad.io/'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
-                                    <img src={wolf} className={style.img} alt={'wolf'}/>
-                                </a>
-                            </div>
-
-                            <div className={'flex items-center gap-2 mt-2 '}>
+                            <div className={'flex items-center gap-2 mt-14 '}>
 
                                 <a href={'https://twitter.com/Buffy_Solana'} target="_blank" rel="noopener noreferrer" className={'hover:bg-[#72D360] duration-300 cursor-pointer w-[55px] h-[55px] rounded-lg bg-white flex items-center justify-center'}>
                                     <img src={twitter} className={style.img} alt={'twitter'}/>
